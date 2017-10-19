@@ -1,6 +1,5 @@
 import static org.junit.Assert.*;
 
-import java.nio.channels.AsynchronousServerSocketChannel;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +9,7 @@ public class OperatorTest {
 
 	Operator obj;
 	int a,b;
-
+@Before
 	public void setUp() throws Exception {
 		
 		obj=new Operator();
@@ -18,14 +17,14 @@ public class OperatorTest {
 		b=2;
 	}
 
-	
+	@After
 	public void tearDown() throws Exception {
 		
 		obj=null;
 		a=0;
 		b=0;
 	}
-
+@Test
 	
 	public void testMul() {
 		assertEquals(6,obj.mul(a, b));
